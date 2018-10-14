@@ -104,7 +104,7 @@ body {
   grid-area: 1 / 1 / -1 / -1;
   overflow: hidden;
   text-transform: uppercase;
-  background-image: linear-gradient(rgba(229, 72, 249, 0.4), rgba(142, 247, 86, 0.4)), url("../images/hero-resize.jpg");
+  background-image: linear-gradient(rgba(229, 72, 249, 0.4), rgba(142, 247, 86, 0.4)), url("../images/hero-min.jpg");
   background-size: cover;
   background-position: center; }
   @media only screen and (max-width: 700px) {
@@ -330,7 +330,6 @@ body {
   .gallery__item {
     grid-area: 4 / 3 / 6 / 5; }
     .gallery__item:hover > * {
-      transform: scale(1.05);
       box-shadow: 1rem 1rem 2rem black;
       cursor: pointer; }
     .gallery__item > * {
@@ -565,6 +564,6 @@ body {
     background-color: pink; } }
 
 .view-center {
-  grid-area: 2 / 2 / 7 / 8;
+  grid-area: 1 / 2 / 8 / 8;
   z-index: 99;
-  transform: scale(1); }
+  transform: scale(0.9); }

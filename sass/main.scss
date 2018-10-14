@@ -135,7 +135,7 @@ body {
 
   overflow: hidden;
   text-transform: uppercase;
-  background-image: linear-gradient(rgba($color-primary, .4), rgba($color-secondary, .4)), url("../images/hero-resize.jpg");
+  background-image: linear-gradient(rgba($color-primary, .4), rgba($color-secondary, .4)), url("../images/hero-min.jpg");
   background-size: cover;
   background-position: center;
 
@@ -425,7 +425,6 @@ body {
   &__item {
 
     &:hover > * {
-      transform: scale(1.05);
       box-shadow: 1rem 1rem 2rem black;
       cursor: pointer;
     }
@@ -742,7 +741,7 @@ body {
 
 // JS applied styles //
 .view-center {
-  grid-area: 2 / 2 / 7 / 8;
+  grid-area: 1 / 2 / 8 / 8;
   z-index: 99;
-  transform: scale(1);
+  transform: scale(.9);
 }
