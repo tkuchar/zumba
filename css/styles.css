@@ -379,18 +379,18 @@ body {
   width: 100%;
   height: 100%;
   z-index: 100;
-  background-color: rgba(1, 1, 1, 0.7);
+  background-color: rgba(1, 1, 1, 0.8);
   transition: all .5s; }
 
 .modal-content {
   font-family: "Lato", sans-serif;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 1fr);
   align-self: center;
   margin: 0 auto;
-  width: 55vw;
+  width: 60vw;
   height: 90vh;
   text-align: center;
   box-shadow: 0 2rem 3rem rgba(0, 0, 100, 0.5);
@@ -428,18 +428,18 @@ body {
   }*/ }
   @media only screen and (max-width: 700px) {
     .modal-content {
-      width: 75vw; } }
+      width: 80vw; } }
   .modal-content__image-container {
-    grid-area: 1 / 1 / 4 / -1;
-    background-image: linear-gradient(to right, #8b3658, #8b3658), url("./images/modal.jpg");
+    grid-area: 1 / 1 / 7 / -1;
+    background-image: linear-gradient(to right, rgba(139, 54, 88, 0.4), rgba(139, 54, 88, 0.4)), url("../images/modal.jpg");
     background-size: cover;
     background-position: top; }
   .modal-content__image {
-    grid-area: 2 / 2 / 3 / 6;
+    grid-area: 3 / 3 / 6 / 7;
     align-self: center;
     width: 100%; }
   .modal-content__title {
-    grid-area: 2/2/3/6;
+    grid-area: 4 / 3 / 5 / 7;
     font-family: "Megrim", cursive;
     align-self: center;
     color: white;
@@ -447,9 +447,10 @@ body {
     background-color: rgba(240, 10, 10, 0.7); }
     @media only screen and (max-width: 700px) {
       .modal-content__title {
+        grid-column: 1 / -1;
         font-size: 2.5rem; } }
   .modal-content__about {
-    grid-area: 4 / 1 / 7 / -1;
+    grid-area: 7 / 1 / -1 / -1;
     font-size: 1.5rem;
     padding: 2rem;
     color: white;
