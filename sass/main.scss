@@ -23,9 +23,8 @@ body {
   min-height: 100vh;
   font-family: $font-display;
   display: grid;
-  //grid-template-rows: 100vh;
   grid-template-columns: 50vw 1fr;
-  grid-row-gap: 1rem;
+  //grid-row-gap: 1rem;
   scroll-behavior: smooth;
 
   @media only screen and (max-width: 700px) {
@@ -100,10 +99,18 @@ body {
 
   &__about {
     grid-area: 7 / 1 / -1 / -1;
-    font-size: 1.5rem;
-    padding: 2rem;
+    display: block;
+    font-weight: 100;
+    font-size: 1.8rem;
+    padding: 1.5rem;
     color: white;
     text-align: center;
+    justify-self: center;
+    align-self: center;
+
+    @media only screen and (max-width: 700px) {
+      font-size: 1rem;
+    }
   }
 
   &__button {
@@ -114,7 +121,6 @@ body {
     color: white;
     border: none;
     padding: 1rem;
-    border-radius: 20% 0 20% 20%;
     cursor: pointer;
   }
 }
@@ -233,7 +239,6 @@ body {
     justify-self: start;
     width: 100%;
     padding: 2rem;
-    border-radius: 0 1.5rem 1.5rem 0;
     background: rgba(2,200,255,.6);
     animation: slideIn .7s ease-in;
 
@@ -274,7 +279,6 @@ body {
     padding: .5rem;
     position: relative;
     font-size: 5rem;
-    border-radius: 1.5rem 0 0 1.5rem;
     background: rgba(2,200,255,.5);
     z-index: 1;
 
@@ -297,7 +301,6 @@ body {
     padding: .5rem;
     position: relative;
     font-size: 5rem;
-    border-radius: 1.5rem 0 0 1.5rem;
     background: rgba(2,200,255,.5);
     z-index: 1;
 
@@ -318,7 +321,6 @@ body {
     left: 0;
     height: 100%;
     width: 3px;
-    border-radius: 1.5rem 0 0 1.5rem;
     background-color: rgba(0,0,0,.6);;
     transform: scaleY(0);
     transition: transform .2s,
@@ -340,7 +342,6 @@ body {
     left: 0;
     height: 100%;
     width: 3px;
-    border-radius: 1.5rem 0 0 1.5rem;
     background-color: rgba(0,0,0,.6);;
     transform: scaleY(0);
     transition: transform .2s,
@@ -386,7 +387,7 @@ body {
 
     @media only screen and (max-width: 700px) {
       font-size: 4rem;
-      margin-bottom: 0;
+      margin-bottom: 3rem;
       height: 8rem;
     }
   }
@@ -451,18 +452,17 @@ body {
       grid-area: 3 / 1 / 4 / 3;
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
       clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-      opacity: .2;
+      opacity: .1;
+      height: 100%;
     }
   }
 }
 
 .schedule:hover .schedule__image {
   transform: translateX(-2rem);
-  opacity: 1;
 
   @media only screen and (max-width: 700px) {
     transform: translateX(0);
-    opacity: .2;
   }
 }
 
@@ -494,7 +494,7 @@ body {
 
   @media only screen and (max-width: 700px) {
       font-size: 4rem;
-      margin-top: 0;
+      margin-top: 2rem;
       height: 8rem;
     }
 }
@@ -505,7 +505,10 @@ body {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 6vw);
   grid-gap: 1rem;
-  overflow: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 
   &__item {
 
