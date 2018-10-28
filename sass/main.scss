@@ -100,7 +100,7 @@ body {
   &__about {
     grid-area: 7 / 1 / -1 / -1;
     display: block;
-    font-weight: 100;
+    font-weight: 150;
     font-size: 1.8rem;
     padding: 1.5rem;
     color: white;
@@ -109,7 +109,7 @@ body {
     align-self: center;
 
     @media only screen and (max-width: 700px) {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
 
