@@ -183,13 +183,23 @@
         })
       });
 
-      close.addEventListener("click", function() {
+      /*close.addEventListener("click", function() {
         modal.classList.toggle("open");
       });
 
       open_btn.addEventListener("click", function() {
         modal.classList.toggle("open");
+      });*/
+
+      close.addEventListener("click", function() {
+        modal.style.transform = "translateX(-100%)";
       });
+
+      open_btn.addEventListener("click", function() {
+        modal.style.visibility = "visible";
+        modal.style.transform = "translateX(0)";
+      });
+
     </script>
   </body>
 </html>

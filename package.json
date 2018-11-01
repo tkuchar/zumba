@@ -8,7 +8,7 @@
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass"
   },
-  "author": "",
+  "author": "Tad Kuchar",
   "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.0",

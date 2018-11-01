@@ -137,9 +137,7 @@ body {
   height: 100%;
   z-index: 100;
   background-color: rgba(1, 1, 1, 0.8);
-  transition: all .5s; }
-
-.open {
+  transition: all .5s;
   transform: translateX(-100%);
   visibility: hidden; }
 
