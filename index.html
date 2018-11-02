@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Zumba: Move it with Marilyn </title>
+    <link rel="preload" href="css/styles.css" as="style" type="">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet" lazyload>
-    <!--<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" lazyload>-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" lazyload>
   </head>
   <body>
 
     <!-- Fixed button/log -->
     <div id="open" class="logo">M</div>
 
+        <!--Modal Slide in-->
+
+    <div id="modal" class="open">
+      <div class="modal-content">
+        <div class=modal-content__image-container></div>
+        <img class="modal-content__image" src="./images/modal.jpg">
+        <h2 class="modal-content__title"> Marilyn Kuchar </h2>
+        <div class="modal-content__about">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut metus pretium, ullamcorper dui at, posuere lorem. Proin eu sollicitudin ipsum. Pellentesque lectus tellus, maximus a enim molestie, facilisis condimentum leo. Sed malesuada tincidunt ex in imperdiet. Nunc at odio eget enim dictum pharetra.
+
+          Proin placerat vitae enim eget scelerisque. Integer ac mollis augue. Sed a venenatis odio, vel tempor quam. Pellentesque at eros ligula. Curabitur tincidunt lacus sed aliquet porta. Proin sed risus rhoncus, blandit augue et, venenatis nunc!
+        </div>
+        <button class="modal-content__button" id="close">X</button>
+      </div>
+    </div>
+
     <!--Begin main content -->
+
     <header class="header">
       <div class="header__hero">
         <h1 class="header__hero--text">
@@ -140,33 +158,6 @@
           <p class="footer__text"> Copyright Marilyn Kuchar </p>
 
     </footer>
-
-    <!--Modal Slide in?-->
-    <div id="modal" class="open">
-      <div class="modal-content">
-        <div class=modal-content__image-container></div>
-        <img class="modal-content__image" src="./images/modal.jpg">
-        <h2 class="modal-content__title"> Marilyn Kuchar </h2>
-        <div class="modal-content__about">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut metus pretium, ullamcorper dui at, posuere lorem. Proin eu sollicitudin ipsum. Pellentesque lectus tellus, maximus a enim molestie, facilisis condimentum leo. Sed malesuada tincidunt ex in imperdiet. Nunc at odio eget enim dictum pharetra.
-
-          Proin placerat vitae enim eget scelerisque. Integer ac mollis augue. Sed a venenatis odio, vel tempor quam. Pellentesque at eros ligula. Curabitur tincidunt lacus sed aliquet porta. Proin sed risus rhoncus, blandit augue et, venenatis nunc!
-        </div>
-        <!--<div class="modal-content__svg-container">
-          <a href="https://www.facebook.com/Moveitwithmarilyn/">
-            <svg class="modal-content__svg-icon--facebook">
-              <use href="/images/facebook.svg#facebook"></use>
-            </svg>
-          </a>
-          <a href="#">
-            <svg class="modal-content__svg-icon--instagram">
-              <use href="/images/instagram.svg#instagram"></use>
-            </svg>
-          </a>
-        </div>-->
-        <button class="modal-content__button" id="close">X</button>
-      </div>
-    </div>
 
     <!-- ///// END MAIN CONTENT /////-->
 
