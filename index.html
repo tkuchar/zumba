@@ -174,14 +174,13 @@
         })
       });
 
-      close.addEventListener("click", function() {
-        modal.style.transform = "translateX(-100%)";
+      open_btn.addEventListener("click", function() {
+        modal.style.opacity = "1";
+        modal.style.transform = "translateX(0)";
       });
 
-      open_btn.addEventListener("click", function() {
-        modal.style.visibility = "visible";
-        modal.style.opacity = 1;
-        modal.style.transform = "translateX(0)";
+      close.addEventListener("click", function() {
+        modal.style.transform = "translateX(-100%)";
       });
 
     </script>
