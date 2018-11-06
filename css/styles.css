@@ -129,12 +129,13 @@ body {
 
 #modal {
   opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: -100;
   background-color: rgba(1, 1, 1, 0.8);
   transition: all .5s;
   transform: translateX(-100%); }
@@ -312,6 +313,7 @@ body {
     transition: all .3s ease-out; }
     @media only screen and (max-width: 700px) {
       .schedule__card {
+        box-shadow: 0 .2rem 1.5rem .5rem grey;
         grid-area: 3 / 1 / 4 / 3;
         margin-left: 0; } }
     .schedule__card--wrapper {

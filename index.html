@@ -13,25 +13,7 @@
 
     <!-- Fixed button/log -->
     <div id="open" class="logo">M</div>
-
-        <!--Modal Slide in-->
-
-    <div id="modal" class="open">
-      <div class="modal-content">
-        <div class=modal-content__image-container></div>
-        <img class="modal-content__image" src="./images/modal.jpg">
-        <h2 class="modal-content__title"> Marilyn Kuchar </h2>
-        <div class="modal-content__about">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut metus pretium, ullamcorper dui at, posuere lorem. Proin eu sollicitudin ipsum. Pellentesque lectus tellus, maximus a enim molestie, facilisis condimentum leo. Sed malesuada tincidunt ex in imperdiet. Nunc at odio eget enim dictum pharetra.
-
-          Proin placerat vitae enim eget scelerisque. Integer ac mollis augue. Sed a venenatis odio, vel tempor quam. Pellentesque at eros ligula. Curabitur tincidunt lacus sed aliquet porta. Proin sed risus rhoncus, blandit augue et, venenatis nunc!
-        </div>
-        <button class="modal-content__button" id="close">X</button>
-      </div>
-    </div>
-
     <!--Begin main content -->
-
     <header class="header">
       <div class="header__hero">
         <h1 class="header__hero--text">
@@ -52,35 +34,35 @@
         <p class="schedule__card--header">Day</p>
 
         <div class="schedule__card--wrapper">
-          <img class="schedule__card--image" src="https://s3-media1.fl.yelpcdn.com/bphoto/8J8N69IWjIZKeMvGQukl7w/o.jpg">
+          <img class="schedule__card--image" src="images/24.jpeg">
           <p class="schedule__card--text">Woodland Hills</p>
         </div>
         <p class="schedule__card--text">5:30PM</p>
         <p class="schedule__card--text">Wednesday</p>
 
         <div class="schedule__card--wrapper">
-          <img class="schedule__card--image" src="https://s3-media1.fl.yelpcdn.com/buphoto/6cn0A98QMBhQk6kxUV1IKg/o.jpg">
+          <img class="schedule__card--image" src="images/tw.jpeg">
           <p class="schedule__card--text">Woodland Hills</p>
         </div>
         <p class="schedule__card--text">6:30PM</p>
         <p class="schedule__card--text">Wednesday</p>
 
         <div class="schedule__card--wrapper">
-          <img class="schedule__card--image" src="https://s3-media1.fl.yelpcdn.com/bphoto/8J8N69IWjIZKeMvGQukl7w/o.jpg">
+          <img class="schedule__card--image" src="images/24.jpeg">
           <p class="schedule__card--text">Woodland Hills</p>
         </div>
         <p class="schedule__card--text">8:00PM</p>
         <p class="schedule__card--text">Thursday</p>
 
         <div class="schedule__card--wrapper">
-          <img class="schedule__card--image" src="https://s3-media1.fl.yelpcdn.com/buphoto/6cn0A98QMBhQk6kxUV1IKg/o.jpg">
+          <img class="schedule__card--image" src="images/tw.jpeg">
           <p class="schedule__card--text">Woodland Hills</p>
         </div>
         <p class="schedule__card--text">9:30AM</p>
         <p class="schedule__card--text">Saturday</p>
 
         <div class="schedule__card--wrapper">
-          <img class="schedule__card--image" src="https://s3-media1.fl.yelpcdn.com/buphoto/6cn0A98QMBhQk6kxUV1IKg/o.jpg">
+          <img class="schedule__card--image" src="images/tw.jpeg">
           <p class="schedule__card--text">Woodland Hills</p>
         </div>
         <p class="schedule__card--text">9:30AM</p>
@@ -107,7 +89,7 @@
         <img src="images/gal-4-min.jpg" alt="gallery image 1" class="gallery__img">
       </figure>
       <figure class="gallery__item gallery__item--5">
-        <img src="images/gal-5-min.jpg" alt="gallery image 1" class="gallery__img">
+        <img src="images/gal-5-min.jpeg" alt="gallery image 1" class="gallery__img">
       </figure>
       <figure class="gallery__item gallery__item--6">
         <img src="images/gal-6-min.jpg" alt="gallery image 1" class="gallery__img">
@@ -159,6 +141,20 @@
 
     </footer>
 
+    <div id="modal" class="open">
+      <div class="modal-content">
+        <div class=modal-content__image-container></div>
+        <img class="modal-content__image" src="./images/modal.jpg">
+        <h2 class="modal-content__title"> Marilyn Kuchar </h2>
+        <div class="modal-content__about">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut metus pretium, ullamcorper dui at, posuere lorem. Proin eu sollicitudin ipsum. Pellentesque lectus tellus, maximus a enim molestie, facilisis condimentum leo. Sed malesuada tincidunt ex in imperdiet. Nunc at odio eget enim dictum pharetra.
+
+          Proin placerat vitae enim eget scelerisque. Integer ac mollis augue. Sed a venenatis odio, vel tempor quam. Pellentesque at eros ligula. Curabitur tincidunt lacus sed aliquet porta. Proin sed risus rhoncus, blandit augue et, venenatis nunc!
+        </div>
+        <button class="modal-content__button" id="close">X</button>
+      </div>
+    </div>
+
     <!-- ///// END MAIN CONTENT /////-->
 
     <script>
@@ -175,11 +171,14 @@
       });
 
       open_btn.addEventListener("click", function() {
+        modal.style.zIndex = "100";
+        modal.style.visibility = "visible";
         modal.style.opacity = "1";
         modal.style.transform = "translateX(0)";
       });
 
       close.addEventListener("click", function() {
+        modal.style.opacity = "0";
         modal.style.transform = "translateX(-100%)";
       });
 
