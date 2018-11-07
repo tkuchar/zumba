@@ -135,9 +135,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -100;
+  z-index: 100;
   background-color: rgba(1, 1, 1, 0.8);
-  transition: all .5s;
   transform: translateX(-100%); }
 
 .modal-content {
@@ -209,7 +208,7 @@ body {
   font-size: 8rem;
   width: 8rem;
   z-index: 2;
-  transition: all .5s;
+  transition: width .5s, border-radius .5s, background .5s, border-color .5s;
   color: #e548f9;
   text-shadow: 3px 3px 25px;
   border: 2px solid #e548f9;
@@ -251,8 +250,7 @@ body {
     background: #1d1e22d6;
     width: 17rem;
     border-color: white;
-    border-radius: 0%;
-    box-shadow: 5px 5px 20px grey; }
+    border-radius: 0%; }
     @media only screen and (max-width: 700px) {
       .logo:hover {
         width: 10.5rem; } }
