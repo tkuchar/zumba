@@ -307,10 +307,14 @@ body {
     height: 100%;
     display: grid;
     grid-area: 3 / 1 / 5 / 2;
-    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    grid-template-columns: repeat(3, min-content);
+    justify-content: center;
     background-color: white;
     margin-left: 3rem;
-    padding: 1rem;
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: 3px;
+    padding: 4rem;
     box-shadow: 0 1rem 2rem grey;
     transition: all .3s ease-out; }
     @media only screen and (max-width: 700px) {
@@ -321,30 +325,22 @@ body {
     .schedule__card--wrapper {
       display: flex;
       align-items: center; }
-    .schedule__card--header {
-      font-size: 3.5rem;
-      letter-spacing: .5rem;
-      justify-self: center;
-      text-decoration: underline; }
-      @media only screen and (max-width: 700px) {
-        .schedule__card--header {
-          font-size: 2.5rem; } }
     .schedule__card--image {
-      width: 5rem;
-      height: 4rem;
+      width: 10rem;
+      height: 10rem;
       padding-right: 1rem; }
     .schedule__card--text {
-      font-size: 2.5rem;
       align-self: center;
-      justify-self: center; }
+      justify-self: center;
+      padding: 1rem; }
       @media only screen and (max-width: 700px) {
         .schedule__card--text {
-          font-size: 1.5rem;
-          padding: .5rem; } }
+          font-size: 2rem;
+          padding: 1rem; } }
   .schedule__image {
     grid-area: 3 / 2 / 5 / 3;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
     clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
