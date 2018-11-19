@@ -307,7 +307,7 @@ body {
     height: 100%;
     display: grid;
     grid-area: 3 / 1 / 5 / 2;
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
     justify-content: center;
     background-color: white;
     margin-left: 3rem;
@@ -321,7 +321,9 @@ body {
       .schedule__card {
         box-shadow: 0 .2rem 1.5rem .5rem grey;
         grid-area: 3 / 1 / 4 / 3;
-        margin-left: 0; } }
+        margin-left: 0;
+        letter-spacing: 1px;
+        padding: 1rem; } }
     .schedule__card--wrapper {
       display: flex;
       align-items: center; }
@@ -329,14 +331,18 @@ body {
       width: 10rem;
       height: 10rem;
       padding-right: 1rem; }
+      @media only screen and (max-width: 700px) {
+        .schedule__card--image {
+          width: 5rem;
+          height: 5rem; } }
     .schedule__card--text {
       align-self: center;
       justify-self: center;
       padding: 1rem; }
       @media only screen and (max-width: 700px) {
         .schedule__card--text {
-          font-size: 2rem;
-          padding: 1rem; } }
+          font-size: 1.5rem;
+          padding: .5rem; } }
   .schedule__image {
     grid-area: 3 / 2 / 5 / 3;
     width: 100%;
