@@ -40,7 +40,7 @@ body {
   grid-template-rows: repeat(2, 50vh);
   grid-template-columns: autofit;
   grid-area: 1 / 1 / -1 / -1;
-  //background-image: linear-gradient(rgba($color-primary, .4), rgba($color-secondary, .4)), url("../images/hero-min.jpg");
+  background-image: linear-gradient(rgba($color-primary, .4), rgba($color-secondary, .4)), url("../images/hero-min.jpg");
   overflow: hidden;
   text-transform: uppercase;
   background-size: cover;

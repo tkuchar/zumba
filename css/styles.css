@@ -25,6 +25,7 @@ body {
   grid-template-rows: repeat(2, 50vh);
   grid-template-columns: autofit;
   grid-area: 1 / 1 / -1 / -1;
+  background-image: linear-gradient(rgba(229, 72, 249, 0.4), rgba(142, 247, 86, 0.4)), url("../images/hero-min.jpg");
   overflow: hidden;
   text-transform: uppercase;
   background-size: cover;
