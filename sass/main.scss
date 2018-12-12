@@ -517,16 +517,16 @@ body {
   padding-right: 1rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  overflow: hidden;
 
   &__item {
 
     &:hover > * {
-      transform: scale(1.05);
       cursor: pointer;
     }
 
     & > * {
-      transition: all .2s;
+      transition: opacity 300ms ease-in-out;
     }
 
     &--1 {
