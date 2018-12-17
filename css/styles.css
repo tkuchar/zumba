@@ -460,6 +460,14 @@ body {
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
   transition: .2s linear;
   perspective: 100rem; }
+  .footer__eq-bars {
+    width: 5rem;
+    height: 5rem;
+    align-self: center; }
+    @media only screen and (max-width: 700px) {
+      .footer__eq-bars {
+        width: 3.5rem;
+        height: 3.5rem; } }
   .footer__email {
     grid-column: 1 / 5;
     text-decoration: none;
