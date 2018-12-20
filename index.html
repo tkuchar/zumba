@@ -135,8 +135,18 @@
     </div>
 
     <!-- ///// END MAIN CONTENT /////-->
-    <script src="https://unpkg.com/animate-css-grid@latest"></script>
+
     <script>
+      let error = false;
+      function gridError() {
+        error = true;
+      }
+    </script>
+
+    <script await src="https://unpkg.com/animate-css-grid@latest" onerror="gridError()"></script>
+
+    <script>
+
       const open_btn = document.getElementById("open");
       const modal = document.getElementById("modal");
       const close = document.getElementById("close")
@@ -145,7 +155,9 @@
       const imgArr = Array.from(imgCollect);
 
       // https://github.com/aholachek/animate-css-grid
-      animateCSSGrid.wrapGrid(grid, {duration : 300});
+      if(error === false) {
+        animateCSSGrid.wrapGrid(grid, {duration : 300});
+      }
 
       imgArr.forEach(function(img) {
         img.addEventListener('click', function() {
