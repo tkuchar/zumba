@@ -38,7 +38,6 @@ body {
 .header {
   display: grid;
   grid-template-rows: repeat(2, 50vh);
-  grid-template-columns: autofit;
   grid-area: 1 / 1 / -1 / -1;
   background-image: linear-gradient(rgba($color-primary, .4), rgba($color-secondary, .4)), url("../images/hero-min.jpg");
   overflow: hidden;
@@ -60,6 +59,7 @@ body {
     width: 92%;
     padding: 2rem;
     background: rgba(2,200,255,.6);
+    box-shadow: 0 1rem 2rem black;
 
     @media only screen and (max-width: 700px) {
       text-align: center;
@@ -103,6 +103,7 @@ body {
     font-size: 5rem;
     background: rgba(2,200,255,.5);
     z-index: 1;
+    box-shadow: 0 1rem 2rem black;
 
     @media only screen and (max-width: 700px) {
       width: 85%;
@@ -126,6 +127,7 @@ body {
     font-size: 5rem;
     background: rgba(2,200,255,.5);
     z-index: 1;
+    box-shadow: 0 1rem 2rem black;
 
     @media only screen and (max-width: 700px) {
       width: 85%;
@@ -234,6 +236,7 @@ body {
   color: white;
   transform: skew(-20deg);
   font-size: 5rem;
+  box-shadow: 0 10px 15px black;
   background-color: rgba(240,10,10,.7);
 
       @media only screen and (max-width: 700px) {
@@ -456,7 +459,7 @@ body {
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   transition: all .2s ease-out;
 
-  @media only screen and (min-width: 1500px) {
+  @media only screen and (min-width: 1600px) {
     height: auto;
   }
 
