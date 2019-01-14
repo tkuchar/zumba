@@ -456,6 +456,10 @@ body {
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   transition: all .2s ease-out;
 
+  @media only screen and (min-width: 1500px) {
+    height: auto;
+  }
+
   @media only screen and (max-width: 700px) {
     display: none;
       /*grid-area: 3 / 1 / 4 / 3;
@@ -463,7 +467,8 @@ body {
       clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
       opacity: .1;
       height: 100%;*/
-    }
+  }
+
   }
 }
 

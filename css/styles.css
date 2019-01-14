@@ -357,6 +357,9 @@ body {
     -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
     clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
     transition: all .2s ease-out; }
+    @media only screen and (min-width: 1500px) {
+      .schedule__image {
+        height: auto; } }
     @media only screen and (max-width: 700px) {
       .schedule__image {
         display: none;
