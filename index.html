@@ -31,7 +31,14 @@
     <section id="schedule" class="schedule">
         <h2 class="schedule__header">Schedule</h2>
       <div class="schedule__card">
-
+        
+        <div class="schedule__card--wrapper">
+          <img class="schedule__card--image" src="images/tw.jpeg">
+          <p class="schedule__card--text">Northridge</p>
+        </div>
+        <p class="schedule__card--text">11:30AM</p>
+        <p class="schedule__card--text">Sunday</p>
+        
         <div class="schedule__card--wrapper">
           <img class="schedule__card--image" src="images/tw.jpeg">
           <p class="schedule__card--text">Woodland Hills</p>
@@ -143,47 +150,7 @@
 
     <!-- ///// END MAIN CONTENT /////-->
 
-    <script>
-      let error = false;
-      function gridError() {
-        error = true;
-      }
-    </script>
-
     <script src="https://unpkg.com/animate-css-grid@latest" onerror="gridError()"></script>
-
-    <script>
-
-      const open_btn = document.getElementById("open");
-      const modal = document.getElementById("modal");
-      const close = document.getElementById("close")
-      const grid = document.querySelector(".gallery");
-      const imgCollect = document.getElementsByClassName("gallery__item");
-      const imgArr = Array.from(imgCollect);
-
-      // https://github.com/aholachek/animate-css-grid
-      if(error === false) {
-        animateCSSGrid.wrapGrid(grid, {duration : 300});
-      }
-
-      imgArr.forEach(function(img) {
-        img.addEventListener('click', function() {
-          img.classList.toggle("view-center");
-        })
-      });
-
-      open_btn.addEventListener("click", function() {
-        modal.style.transition = "all .5s ease-in";
-        modal.style.visibility = "visible";
-        modal.style.opacity = "1";
-        modal.style.transform = "translateX(0)";
-      });
-
-      close.addEventListener("click", function() {
-        modal.style.opacity = "0";
-        modal.style.transform = "translateX(-100%)";
-      });
-
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
