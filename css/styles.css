@@ -333,7 +333,8 @@ body {
         padding: 1rem; } }
     .schedule__card--wrapper {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      padding: 1rem; }
     .schedule__card--image {
       width: 8.5rem;
       height: 8.5rem; }

@@ -149,7 +149,12 @@
     </div>
 
     <!-- ///// END MAIN CONTENT /////-->
-
+    <script>
+      let error = false;
+      function gridError() {
+        error = true;
+      }
+    </script>
     <script src="https://unpkg.com/animate-css-grid@latest" onerror="gridError()"></script>
     <script src="app.js"></script>
   </body>

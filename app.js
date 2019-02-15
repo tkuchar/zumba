@@ -5,11 +5,6 @@ const grid = document.querySelector(".gallery");
 const imgCollect = document.getElementsByClassName("gallery__item");
 const imgArr = Array.from(imgCollect);
 
-let error = false;
-function gridError() {
-  error = true;
-}
-
 // https://github.com/aholachek/animate-css-grid
 if(error === false) {
   animateCSSGrid.wrapGrid(grid, {duration : 300});
