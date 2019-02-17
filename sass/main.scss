@@ -3,7 +3,7 @@ $color-secondary: #8ef756;
 $color-tertiary: #f4f72e;
 $color-blue: rgba(2,200,255,.8);
 
-$font-display: 'Megrim', cursive;
+$font-display: 'Megrim', Impact, sans-serif;
 
 *,
 *::after,
@@ -198,7 +198,7 @@ body {
 }
 
 .modal-content {
-  font-family: "Lato", sans-serif;
+  font-family: "Arial Black", sans-serif;
   position: relative;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -437,6 +437,7 @@ body {
     }
 
     &--text {
+      font-family: 'Arial Black', sans-serif;
       align-self: center;
       justify-self: center;
       padding: 1rem;
@@ -681,11 +682,11 @@ body {
   }
 
   &__text {
-    font-family: 'Lato';
+    font-family: Impact, sans-serif;
     color: white;
     grid-row: 3 / 4;
     grid-column: 1 / -1;
-    font-size: 1rem;
+    font-size: 1.2rem;
     align-self: center;
     justify-self: center;
     margin: .5rem;

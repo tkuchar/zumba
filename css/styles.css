@@ -11,7 +11,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: "Megrim", cursive;
+  font-family: "Megrim", Impact, sans-serif;
   display: grid;
   grid-template-columns: 50vw 1fr;
   scroll-behavior: smooth; }
@@ -151,7 +151,7 @@ body {
   transform: translateX(-100%); }
 
 .modal-content {
-  font-family: "Lato", sans-serif;
+  font-family: "Arial Black", sans-serif;
   position: relative;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -343,6 +343,7 @@ body {
           width: 5rem;
           height: 5rem; } }
     .schedule__card--text {
+      font-family: 'Arial Black', sans-serif;
       align-self: center;
       justify-self: center;
       padding: 1rem; }
@@ -524,11 +525,11 @@ body {
       .footer__social--instagram:hover {
         transform: rotate(15deg) scale(1.1); }
   .footer__text {
-    font-family: 'Lato';
+    font-family: Impact, sans-serif;
     color: white;
     grid-row: 3 / 4;
     grid-column: 1 / -1;
-    font-size: 1rem;
+    font-size: 1.2rem;
     align-self: center;
     justify-self: center;
     margin: .5rem; }
