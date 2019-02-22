@@ -151,7 +151,7 @@ body {
   transform: translateX(-100%); }
 
 .modal-content {
-  font-family: "Arial Black", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   position: relative;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -311,9 +311,8 @@ body {
         margin-bottom: 3rem;
         height: 8rem; } }
   .schedule__card {
-    font-family: 'Lato', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    height: 100%;
     display: grid;
     grid-area: 3 / 1 / 5 / 2;
     grid-template-columns: repeat(3, minmax(min-content, max-content));
@@ -322,7 +321,7 @@ body {
     margin-left: 3rem;
     font-size: 2.2rem;
     font-style: italic;
-    padding: 4rem;
+    padding: 3rem;
     box-shadow: 0 1rem 2rem grey;
     transition: all .3s ease-out; }
     @media only screen and (max-width: 700px) {
@@ -336,14 +335,14 @@ body {
       align-items: center;
       padding: 1rem; }
     .schedule__card--image {
-      width: 8.5rem;
-      height: 8.5rem; }
+      width: 7rem;
+      height: 7rem; }
       @media only screen and (max-width: 700px) {
         .schedule__card--image {
           width: 5rem;
           height: 5rem; } }
     .schedule__card--text {
-      font-family: 'Arial Black', sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       align-self: center;
       justify-self: center;
       padding: 1rem; }
@@ -353,12 +352,12 @@ body {
           padding: .5rem; } }
   .schedule__image {
     grid-area: 3 / 2 / 5 / 3;
-    width: 100%;
     height: 100%;
     object-fit: cover;
     -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
     clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-    transition: all .2s ease-out; }
+    transition: all .2s ease-out;
+    justify-self: center; }
     @media only screen and (min-width: 1600px) {
       .schedule__image {
         height: auto; } }
@@ -372,13 +371,13 @@ body {
       height: 100%;*/ } }
 
 .schedule:hover .schedule__image {
-  transform: translateX(-2rem); }
+  transform: translateX(-3rem); }
   @media only screen and (max-width: 700px) {
     .schedule:hover .schedule__image {
       transform: translateX(0); } }
 
 .schedule:hover .schedule__card {
-  transform: rotateY(6deg) rotateX(6deg); }
+  transform: rotateY(6deg) rotateZ(-2deg) translateX(1rem); }
   @media only screen and (max-width: 700px) {
     .schedule:hover .schedule__card {
       transform: none;
