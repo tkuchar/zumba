@@ -371,10 +371,13 @@ body {
       height: 100%;*/ } }
 
 .schedule:hover .schedule__image {
-  transform: translateX(-3rem); }
+  transform: translateX(-1.5rem); }
   @media only screen and (max-width: 700px) {
     .schedule:hover .schedule__image {
       transform: translateX(0); } }
+  @media only screen and (min-width: 1300px) {
+    .schedule:hover .schedule__image {
+      transform: translateX(-5rem); } }
 
 .schedule:hover .schedule__card {
   transform: rotateY(6deg) rotateZ(-2deg) translateX(1rem); }
