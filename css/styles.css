@@ -352,7 +352,6 @@ body {
           padding: .5rem; } }
   .schedule__image {
     grid-area: 3 / 2 / 5 / 3;
-    height: 100%;
     width: 100%;
     object-fit: cover;
     -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
@@ -362,6 +361,9 @@ body {
     @media only screen and (min-width: 1600px) {
       .schedule__image {
         height: auto; } }
+    @media only screen and (max-width: 1250px) {
+      .schedule__image {
+        height: 100%; } }
     @media only screen and (max-width: 700px) {
       .schedule__image {
         display: none;
