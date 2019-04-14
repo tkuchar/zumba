@@ -2,6 +2,9 @@ const open_btn = document.getElementById("open");
 const modal = document.getElementById("modal");
 const close = document.getElementById("close")
 const grid = document.querySelector(".gallery");
+const footer = document.querySelector(".footer__text");
+const medals = document.querySelectorAll('.medals');
+const modalTitle = document.querySelector('.modal-content__title');
 // const imgCollect = document.getElementsByClassName("gallery__item");
 // const imgArr = Array.from(imgCollect);
 
@@ -36,4 +39,20 @@ open_btn.addEventListener("click", function() {
 close.addEventListener("click", function() {
   modal.style.opacity = "0";
   modal.style.transform = "translateX(-100%)";
-});
+}); 
+
+function scrolly() {
+  medals.forEach(element => {
+     if((window.innerHeight > 800 && scrollY > 850) || (window.innerHeight < 700 && scrollY > 650)) {
+       element.style.transform = "scale(1.6)";
+       modalTitle.style.transform = 'scaleY(1) rotateX(0deg) skew(-20deg)';
+     }
+    else {
+      element.style.transform = "scale(0)";
+   }
+  });
+}
+
+
+let date = new Date();
+footer.innerHTML = `&copy; Marilyn Kuchar ${date.getFullYear()}`;

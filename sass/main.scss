@@ -188,6 +188,9 @@ body {
   opacity: 0;
   visibility: hidden;
   position: fixed;
+  display: grid;
+  justify-items: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -197,24 +200,57 @@ body {
   transform: translateX(-100%);
 }
 
+.modal-coming-soon {
+
+  &__text {
+    font-family: Helvetica, sans-serif;
+    align-self: center;
+    color: white;
+    transform: skew(-25deg);
+    font-size: 6rem;
+    padding: 2rem;
+    box-shadow: 3px 3px 10px black;
+    background-color: rgba(240,10,10,.7);
+  }
+}
+
+.medals {
+  width: 2.5rem;
+  transition: all .5s;
+}
+
+.medals-text {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 10px;
+  font-family: $font-display;
+  transform: skew(-10deg);
+  font-family: 'Megrim', sans-serif;
+      background: linear-gradient(to right, red, orange);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+}
+
 .modal-content {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
+  grid-row: 2 / 4;
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(9, 1fr);
-
-  align-self: center;
-  margin: 0 auto;
-  margin-top: 2rem;
-  width: 60vw;
-  height: 90vh;
+  width: 100%;
+  height: 110vh;
   text-align: center;
-  box-shadow: 0 2rem 3rem rgba(0,0,100,.5);
+  background: black;
+  padding-bottom: 10rem;
+  box-shadow: 0 30px 30px grey;
 
-    @media only screen and (max-width: 700px) {
+    /* @media only screen and (max-width: 700px) {
     width: 80vw;
-  }
+    } */
 
   &__image-container {
     grid-area: 1 / 1 / 7 / -1;
@@ -230,14 +266,17 @@ body {
   }
 
   &__title {
-  grid-area: 4 / 3 / 5 / 7;
+  grid-area: 4 / 2 / 5 / 8;
   font-family: "Megrim", cursive;
   align-self: center;
   color: white;
   transform: skew(-20deg);
-  font-size: 5rem;
+  font-size: 6rem;
+  padding: 1rem;
   box-shadow: 0 10px 15px black;
   background-color: rgba(240,10,10,.7);
+  transform: scaleY(0) rotateX(90deg);
+  transition: all 1s;
 
       @media only screen and (max-width: 700px) {
       grid-column: 1 / -1;
@@ -246,18 +285,42 @@ body {
   }
 
   &__about {
-    grid-area: 7 / 1 / -1 / -1;
+    grid-area: 7 / 3 / -1 / 7;
     display: block;
     font-weight: 150;
-    font-size: 1.3rem;
+    font-size: 2.2rem;
     padding: 1.5rem;
     color: white;
+    background-color: black;
+    border-radius: 1rem;
     text-align: center;
     justify-self: center;
     align-self: center;
+    border: 1px solid red;
+
+    &--text {
+      border-bottom: 1px solid white;
+      padding-bottom: 2rem;
+    }
+
+    &--text--span {
+      font-size: 3rem;
+      font-family: 'Megrim', sans-serif;
+      background: linear-gradient(to right, red, orange);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+
+    &__medals {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+    }
 
     @media only screen and (max-width: 700px) {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -265,9 +328,10 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: black;
+    background-color: red;
     color: white;
     border: none;
+    font-size: 3rem;
     padding: 1rem;
     cursor: pointer;
   }
@@ -367,9 +431,11 @@ body {
 //// SCHEDULE ////
 
 .schedule {
-  grid-area: 2 / 1 / 4 / -1;
+  grid-area: 4 / 1 / 6 / -1;
   display: grid;
   perspective: 100rem;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
 
   @media only screen and (max-width: 700px) {
       margin-top: 0;
@@ -417,6 +483,11 @@ body {
       grid-area: 3 / 1 / 4 / 3;
       margin-left: 0;
       padding: 1rem;
+    }
+
+    &--header {
+      grid-column: 1 / -1;
+      text-align: center;
     }
 
     &--wrapper {
@@ -486,7 +557,7 @@ body {
 }
 
 .schedule:hover .schedule__card {
-  transform: rotateY(6deg) rotateZ(-2deg) translateX(1rem);
+  transform: rotateY(6deg) translateX(2rem) scale(.9);
 
   @media only screen and (max-width: 700px) {
     transform: none;
@@ -497,7 +568,7 @@ body {
 //// GALLERY ////
 .gallery-header {
   display: grid;
-  grid-area: 4 / 1 / 5 / 3;
+  grid-area: 6 / 1 / 6 / 3;
   background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-tertiary);
   margin-top: -3rem;
   font-size: 6rem;
@@ -553,8 +624,6 @@ body {
     }
     &--5 {
       grid-area: 3 / 1 / 6 / 3;
-    }
-    &--6 {
     }
       grid-area: 4 / 3 / 8 / 5;
     &--7 {
@@ -614,9 +683,9 @@ body {
     grid-column: 1 / 5;
     text-decoration: none;
     font-weight: 700;
-    padding: 1rem;
-    margin-top: 1.8rem;
-    font-size: 4rem;
+    padding: 1.4rem;
+    margin-top: 3rem;
+    font-size: 5.5rem;
     color: white;
     align-self: start;
     justify-self: center;
@@ -684,10 +753,11 @@ body {
     color: white;
     grid-row: 3 / 4;
     grid-column: 1 / -1;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     align-self: center;
     justify-self: center;
-    margin: .5rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
   }
 }
 

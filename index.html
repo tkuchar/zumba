@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet" lazyload>
   </head>
-  <body>
+  <body onscroll="scrolly()">
 
     <!-- Fixed button/log -->
     <div id="open" class="logo">M</div>
@@ -25,12 +25,42 @@
       <h2 class="header__contact"><a href="#contact" class="anchor-text">Contact</a></h2>
     </header>
 
+    <div class="modal-content">
+      <div class=modal-content__image-container></div>
+      <img class="modal-content__image" src="./images/modal.jpg">
+      <h2 class="modal-content__title"> Marilyn Kuchar </h2>
+      <article class="modal-content__about">
+        <p class="modal-content__about--text">
+          <span class="modal-content__about--text--span"> Marilyn Kuchar </span> is one of West Valley's preeminenent Zumba instructors. She pops off daily, and you'll be lucky
+          to get a place in one of her classes.
+        </p>
+        <div class="modal-content__about__medals">
+            <div class="medals-container">
+              <p class="medals-text"> Zin Academy </p>
+              <img class="medals" src="https://d29za44huniau5.cloudfront.net/wp-content/uploads/2018/03/academies-2015.svg">
+            </div>
+            <div class="medals-container">
+            <p class="medals-text"> 4 Year Zin</p>
+            <img class="medals" src="https://d29za44huniau5.cloudfront.net/wp-content/uploads/2018/03/4years.svg">
+            </div>
+            <div class="medals-container">
+            <p class="medals-text"> Zin Wear Insider </p>
+            <img class="medals" src="https://d29za44huniau5.cloudfront.net/uploads/2018/5/zumbawea-insider.svg">
+            </div>
+            <div class="medals-container">
+            <p class="medals-text"> Zin Affiliate</p>
+            <img class="medals" src="https://d29za44huniau5.cloudfront.net/wp-content/uploads/2018/03/affiliate.svg">
+            </div>
+          </div>
+      </article>
+    </div>
+
     <!-- //// SCHEDULE //// -->
 
     <section id="schedule" class="schedule">
-        <h2 class="schedule__header">Schedule</h2>
+        <!--<h2 class="schedule__header">Schedule</h2>-->
       <div class="schedule__card">
-        
+        <h2 class="schedule__card--header"> Schedule </h2>
         <div class="schedule__card--wrapper">
           <img class="schedule__card--image" src="images/tw.jpeg" alt="Total Woman Gym">
           <p class="schedule__card--text">Northridge</p>
@@ -73,7 +103,7 @@
     </section>
 
     <!--///// GALLERY /////-->
-    <h2 class="gallery-header">Gallery</h2>
+    <!--<h2 class="gallery-header">Gallery</h2>-->
     <div class="gallery">
       <figure class="gallery__item gallery__item--1">
         <img src="images/gal-1-min.png" alt="gallery image 1" class="gallery__img">
@@ -114,7 +144,7 @@
     </div>
     <footer id="contact" class="footer">
 
-      <a class="footer__email" href="#"> marilyn@zumba.com </a>
+      <a class="footer__email" href="https://docs.google.com/forms/d/e/1FAIpQLSdVu6g5ubF9EKnOve6FkFkgQE0I-zZrIXPIuqGCA_gQeWbN7g/viewform?usp=sf_link" aria-label="Contact Me"> Contact Me </a>
 
       <div class="footer__social">
 
@@ -141,20 +171,14 @@
     </footer>
 
     <div id="modal" class="open">
-      <div class="modal-content">
-        <div class=modal-content__image-container></div>
-        <img class="modal-content__image" src="./images/modal.jpg">
-        <h2 class="modal-content__title"> Marilyn Kuchar </h2>
-        <div class="modal-content__about">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut metus pretium, ullamcorper dui at, posuere lorem. Proin eu sollicitudin ipsum. Pellentesque lectus tellus, maximus a enim molestie, facilisis condimentum leo. Sed malesuada tincidunt ex in imperdiet. Nunc at odio eget enim dictum pharetra.
-
-          Proin placerat vitae enim eget scelerisque. Integer ac mollis augue. Sed a venenatis odio, vel tempor quam. Pellentesque at eros ligula. Curabitur tincidunt lacus sed aliquet porta. Proin sed risus rhoncus, blandit augue et, venenatis nunc!
-        </div>
-        <button class="modal-content__button" id="close">X</button>
+      <div class="modal-coming-soon">
+        <div class="modal-coming-soon__text"> Coming soon!</div>
       </div>
+      <button class="modal-content__button" id="close">X</button>
     </div>
 
     <!-- ///// END MAIN CONTENT /////-->
+    <script></script>
     <script>
       let error = false;
       function gridError() {
