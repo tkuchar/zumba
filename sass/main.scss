@@ -208,29 +208,40 @@ body {
     color: white;
     transform: skew(-25deg);
     font-size: 6rem;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 3px 3px 10px black;
     background-color: rgba(240,10,10,.7);
+
+    @media only screen and (max-width: 700px) {
+      font-size: 3rem;
+    }
   }
 }
 
 .medals {
-  width: 2.5rem;
+  width: 5rem;
   transition: all .5s;
+
+  @media only screen and (max-width: 700px) {
+    width: 2.5rem;
+  }
 }
 
 .medals-text {
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: bold;
-  padding: 10px;
-  font-family: $font-display;
-  transform: skew(-10deg);
+  padding: 1.5rem;
   font-family: 'Megrim', sans-serif;
       background: linear-gradient(to right, red, orange);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       font-weight: bold;
+
+      @media only screen and (max-width: 700px) {
+        font-size: 1.2rem;
+        font-family: sans-serif
+      }
 }
 
 .modal-content {
@@ -263,20 +274,26 @@ body {
     grid-area: 3 / 3 / 6 / 7;
     align-self: center;
     width: 100%;
+
+    @media only screen and (max-width: 700px) {
+      grid-area: 2 / 2 / 7 / 8;
+    }
+    
   }
 
   &__title {
   grid-area: 4 / 2 / 5 / 8;
+  width: 95%;
   font-family: "Megrim", cursive;
   align-self: center;
+  justify-self: center;
   color: white;
-  transform: skew(-20deg);
   font-size: 6rem;
   padding: 1rem;
-  box-shadow: 0 10px 15px black;
   background-color: rgba(240,10,10,.7);
-  transform: scaleY(0) rotateX(90deg);
-  transition: all 1s;
+  transform: scaleY(0) rotateX(90deg) skew(-20deg);
+  will-change: auto;
+  transition: all .5s;
 
       @media only screen and (max-width: 700px) {
       grid-column: 1 / -1;
@@ -289,7 +306,7 @@ body {
     display: block;
     font-weight: 150;
     font-size: 2.2rem;
-    padding: 1.5rem;
+    padding: 2rem;
     color: white;
     background-color: black;
     border-radius: 1rem;
@@ -304,7 +321,7 @@ body {
     }
 
     &--text--span {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-family: 'Megrim', sans-serif;
       background: linear-gradient(to right, red, orange);
       background-clip: text;
@@ -315,8 +332,11 @@ body {
 
     &__medals {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      align-items: center;
       margin-top: 1rem;
+      will-change: auto;
+      transition: all .5s;
     }
 
     @media only screen and (max-width: 700px) {
@@ -592,7 +612,7 @@ body {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(7, 6vw);
+  grid-template-rows: repeat(7, 7vw);
   grid-gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -604,10 +624,6 @@ body {
 
     &:hover > * {
       cursor: pointer;
-    }
-
-    & > * {
-      transition: opacity 300ms ease-in-out;
     }
 
     &--1 {
