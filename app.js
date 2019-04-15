@@ -37,7 +37,7 @@ close.addEventListener("click", function() {
 }); 
 
 function scrolly() {
-     if((window.innerHeight > 800 && scrollY > 750) || (window.innerHeight < 700 && scrollY > 600)) {
+     if((window.innerHeight > 800 && scrollY > 750) || (window.innerHeight < 800 && scrollY > 600)) {
       medalsContainer.style.transform = "scale(1)";
       modalTitle.style.transform = 'scaleY(1) rotateX(0deg) skew(-20deg)';
      }
